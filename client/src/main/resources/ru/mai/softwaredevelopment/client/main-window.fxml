@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ccccff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mai.softwaredevelopment.client.controllers.MainController">
+    <children>
+        <AnchorPane prefHeight="70.0" prefWidth="800.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Label fx:id="usernameField" alignment="CENTER" prefHeight="70.0" prefWidth="800.0" text="Calendar" textFill="#ccccff" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <GridPane fx:id="gridPane" gridLinesVisible="true" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="120.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="350.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="350.0" minHeight="10.0" prefHeight="350.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="monthField" alignment="CENTER" prefHeight="40.0" prefWidth="350.0" text="Month">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="noteField" alignment="CENTER" prefHeight="40.0" prefWidth="350.0" text="Note" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Label>
+                <VBox fx:id="noteArea" prefHeight="350.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <children>
+                        <TextArea fx:id="noteDisplayField" prefHeight="310.0" prefWidth="350.0" promptText="Nothing planned for today..." wrapText="true">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font></TextArea>
+                        <HBox prefHeight="40.0" prefWidth="350.0">
+                            <children>
+                                <Button fx:id="saveButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="350.0" text="Save">
+                                    <font>
+                                        <Font name="Arial" size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="350.0" text="Delete">
+                                    <font>
+                                        <Font name="Arial" size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <HBox prefHeight="40.0" prefWidth="350.0" GridPane.rowIndex="2">
+                    <children>
+                        <Button fx:id="previousMonthButton" mnemonicParsing="false" onAction="#onPreviousMonthButtonAction" prefHeight="40.0" prefWidth="350.0" text="&lt;">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="nextMonthButton" mnemonicParsing="false" onAction="#onNextMonthButtonAction" prefHeight="40.0" prefWidth="350.0" text="&gt;">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox prefHeight="40.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <children>
+                        <Button fx:id="todayButton" mnemonicParsing="false" onAction="#onTodayButtonAction" prefHeight="40.0" prefWidth="350.0" text="Today">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="logInButton" mnemonicParsing="false" onAction="#onLogInButtonAction" prefHeight="40.0" prefWidth="350.0" text="Log in">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#onLogOutButtonAction" prefHeight="40.0" prefWidth="350.0" text="Log out">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

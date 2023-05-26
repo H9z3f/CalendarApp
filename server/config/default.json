@@ -1,0 +1,9 @@
+{
+  "server": {
+    "port": 3000,
+    "database": {
+      "uri": "mongodb+srv://softwaredevelopment:rM1McRNUpBLWYD8Y@softwaredevelopment.xwok6gx.mongodb.net/calendar?retryWrites=true&w=majority",
+      "email": "softwaredevelopment595@gmail.com"
+    }
+  }
+}
