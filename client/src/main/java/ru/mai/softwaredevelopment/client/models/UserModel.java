@@ -34,7 +34,7 @@ public class UserModel {
         String response;
         UserResponse userResponse = new UserResponse();
         try {
-            response = ServerRequests.loginRequest(hashToHex(username), hashToHex(password));
+            response = ServerRequests.loginRequest(username, hashToHex(password));
             userResponse = objectMapper.readValue(response, UserResponse.class);
         } catch (IOException e) {
             initializeAuthenticationErrorStage(userResponse.getDescription());
@@ -56,7 +56,7 @@ public class UserModel {
         String response;
         UserResponse userResponse = new UserResponse();
         try {
-            response = ServerRequests.registrationRequest(hashToHex(username), hashToHex(password));
+            response = ServerRequests.registrationRequest(username, hashToHex(password));
             userResponse = objectMapper.readValue(response, UserResponse.class);
         } catch (IOException e) {
             initializeAuthenticationErrorStage(userResponse.getDescription());
